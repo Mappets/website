@@ -8,7 +8,7 @@
 		<div class="row fullscreen d-flex align-items-center justify-content-between">
 			<div class="home-banner-content col-lg-6 col-md-6">
 				<h1>
-					Apps That <br> Suits You Better
+					App That <br> Suits You Better
 				</h1>
 				<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards.</p>
 				<div class="download-button d-flex flex-row justify-content-start">

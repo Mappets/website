@@ -3,7 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="shortcut icon" href="img/fav.png">
+	<link rel="shortcut icon" href="img/favicon.ico">
 	<meta name="author" content="codepixer">
 	<meta name="description" content="">
 	<meta name="keywords" content="">
@@ -29,7 +29,6 @@
 
 	@section('content')
 	@show
-
 
 	<!-- Start Footer Area -->
 	@include('layouts.includes.footer')
