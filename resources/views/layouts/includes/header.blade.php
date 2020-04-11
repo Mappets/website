@@ -6,37 +6,13 @@
             </div>
             <nav id="nav-menu-container color-black">
                 <ul class="nav-menu">
+                    <preference-locale-component portuguese="{{ __('header.portuguese') }}" english="{{ __('header.english') }}"></preference-locale-component>
                     <li class="menu-active"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li class="menu-has-children"><a href=""><img class="language-picture" src="img/global.svg" alt=""></a>
-                        <ul>
-                            <li><a href="#">Portuguese</a></li>
-                            <li><a href="#">English</a></li>
-                        </ul>
-                    </li>
-                    <li class="sign-in-button"><a href="https://web.mappets.app/">Sign in</a></li>
+                    <sign-in-button-component sign-in="{{ __('header.sign_in') }}"></sign-in-button-component>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
-
-<style>
-    .language-picture {
-        width: 16px;
-    }
-
-    .sign-in-button {
-        border: 2px groove #fff;
-        border-radius: 15px 15px 15px 0px;
-    }
-
-    .logo {
-        width: 210px;
-    }
-
-    .color-black {
-        color: #000 !important;
-    }
-</style>

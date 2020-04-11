@@ -24,6 +24,16 @@ Vue.component(
     require("./components/ExampleComponent.vue").default
 );
 
+Vue.component(
+    "preference-locale-component",
+    require("./components/LocaleComponent.vue").default
+);
+
+Vue.component(
+    "sign-in-button-component",
+    require("./components/SignInButtonComponent.vue").default
+);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
