@@ -31,12 +31,14 @@ class PreferenceController extends Controller
      */
     public function setLocale(SetLocale $request)
     {
-        Cookie::queue('locale', $request->locale, 10);
-
         $cookie = Cookie::get('locale');
 
-        $locale = App::setLocale($cookie);
+        App::setLocale($request->locale);
 
-        return new DefaultResource([$locale]);
+        $locale = App::getLocale();
+
+        return response()->json([
+            'data' => $locale
+        ])->cookie('locale', $request->locale, 10);
     }
 }
