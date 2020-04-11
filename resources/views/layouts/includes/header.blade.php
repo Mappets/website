@@ -6,7 +6,7 @@
             </div>
             <nav id="nav-menu-container color-black">
                 <ul class="nav-menu">
-                    <preference-locale-component portuguese="{{ __('header.portuguese') }}" english="{{ __('header.english') }}"></preference-locale-component>
+                    <!-- <preference-locale-component portuguese="{{ __('header.portuguese') }}" english="{{ __('header.english') }}"></preference-locale-component> -->
                     <li class="menu-active"><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">FAQ</a></li>
