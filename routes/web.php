@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'WebsiteController@index');
+Route::get('/help', 'WebsiteController@help');

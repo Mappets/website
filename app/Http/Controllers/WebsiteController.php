@@ -15,4 +15,14 @@ class WebsiteController extends Controller
     {
         return view('index');
     }
+
+    /**
+     * Returns the website help
+     * 
+     * @return view
+     */
+    public function help(Request $request)
+    {
+        return view('help');
+    }
 }
