@@ -3,7 +3,7 @@ services:
   app:
     build:
       args:
-        user: sammy
+        user: website
         uid: 1000
       context: ./
       dockerfile: ./compose/Dockerfile
@@ -37,7 +37,7 @@ services:
     container_name: website-nginx
     restart: unless-stopped
     ports:
-      - 8000:80
+      - 8005:80
     volumes:
       - ./:/var/www
       - ./compose/nginx:/etc/nginx/conf.d/
