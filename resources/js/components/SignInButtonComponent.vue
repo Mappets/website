@@ -1,12 +1,14 @@
 <template>
     <li class="sign-in-button">
-        <a href="https://web.mappets.app/">{{ signIn }}</a>
+        <a href="https://web.mappets.app/">{{ $t("header.signIn") }}</a>
     </li>
 </template>
 
 <script>
 export default {
-    props: ["signIn"]
+    props: [
+        //
+    ]
 };
 </script>
 

@@ -1,51 +1,58 @@
 <template>
-    <li class="menu-has-children">
-        <a href="#">
-            <img class="language-picture" src="img/global.svg" alt />
-        </a>
-        <ul>
-            <li @click="update('pt-br')">
-                <a href="#">{{ portuguese }}</a>
-            </li>
-            <li @click="update('en')">
-                <a href="#">{{ english }}</a>
-            </li>
-        </ul>
+    <li>
+        <select
+            class="form-control"
+            v-model="model.language"
+            @change.prevent="update"
+        >
+            <option value="pt-br">{{
+                $t("preferences.locale.portuguese")
+            }}</option>
+            <option value="en">{{ $t("preferences.locale.english") }}</option>
+        </select>
     </li>
 </template>
 
 <script>
-import { HTTP } from "../services/api";
-import { LOCALE } from "../utils/webServices";
-import { OK, CREATED } from "../utils/httpStatusCodes";
+import i18n from "../locales/i18n";
 
 export default {
-    props: ["english", "portuguese"],
+    data() {
+        return {
+            model: {
+                language: ""
+            }
+        };
+    },
     methods: {
-        update(param) {
+        /**
+         * Update the preference language
+         * @return void
+         */
+        update() {
             // Save the preference into local storage
-            localStorage.setItem("preferenceLanguage", param);
+            localStorage.setItem("preferenceLanguage", this.model.language);
 
             // Get the preference inside local storage
-            this.setLocale(param);
+            this.getPreferenceLanguage();
         },
-        setLocale(param) {
-            HTTP.patch(LOCALE, {
-                locale: param
-            })
-                .then(response => {
-                    console.log(response);
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+        /**
+         * Get the preference language
+         * @return string
+         */
+        getPreferenceLanguage() {
+            let language = localStorage.getItem("preferenceLanguage");
+
+            if (language) {
+                i18n.locale = language;
+                this.model.language = language;
+            } else {
+                this.model.language = i18n.locale;
+            }
         }
+    },
+    created() {
+        this.getPreferenceLanguage();
     }
 };
 </script>
-
-<style scoped>
-.language-picture {
-    width: 16px;
-}
-</style>

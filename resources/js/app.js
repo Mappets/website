@@ -7,6 +7,7 @@
 require("./bootstrap");
 
 window.Vue = require("vue");
+import i18n from "./locales/i18n";
 
 /**
  * The following block of code may be used to automatically register your
@@ -25,6 +26,21 @@ Vue.component(
 );
 
 Vue.component(
+    "home-component",
+    require("./components/HomeComponent.vue").default
+);
+
+Vue.component(
+    "about-component",
+    require("./components/AboutComponent.vue").default
+);
+
+Vue.component(
+    "features-component",
+    require("./components/FeaturesComponent.vue").default
+);
+
+Vue.component(
     "preference-locale-component",
     require("./components/LocaleComponent.vue").default
 );
@@ -34,6 +50,16 @@ Vue.component(
     require("./components/SignInButtonComponent.vue").default
 );
 
+Vue.component(
+    "navbar-component",
+    require("./components/header/NavbarComponent.vue").default
+);
+
+Vue.component(
+    "footer-component",
+    require("./components/footer/FooterComponent.vue").default
+);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -41,5 +67,6 @@ Vue.component(
  */
 
 const app = new Vue({
+    i18n,
     el: "#app"
 });
