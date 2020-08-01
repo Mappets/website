@@ -4,9 +4,9 @@ export default {
     description: "We are a collaborative platform for the future of animals.",
     available: "Available",
     soon: "Soon",
-    onPlayStore: "On play Store",
+    onPlayStore: "On Play Store",
     onAppStore: "On App Store",
-    inPlayStore: "In play Store",
+    inPlayStore: "In Play Store",
     inAppStore: "In App Store",
     header: {
         about: "About",
@@ -17,7 +17,8 @@ export default {
         softwareDevelopment: "Software development",
         design: "Design",
         consulting: "Consulting",
-        signIn: "Sign in"
+        signIn: "Sign in",
+        webVersion: "Web version"
     },
     preferences: {
         locale: {
