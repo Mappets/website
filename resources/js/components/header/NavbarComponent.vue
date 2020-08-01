@@ -4,8 +4,12 @@
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
                     <a href="#">
-                        <!-- <img src="img/logo.png" alt="Mappets" title="Mappets" /> -->
-                        Mappets
+                        <img
+                            src="img/brand-mono.png"
+                            alt="Mappets"
+                            title="Mappets"
+                            class="logo"
+                        />
                     </a>
                 </div>
                 <nav id="nav-menu-container color-black">
@@ -24,4 +28,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+@media (min-width: 778px) {
+    .logo {
+        width: 190px;
+    }
+}
+</style>
